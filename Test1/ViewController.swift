@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var redRobotLogo: UIImageView!
+    @IBOutlet weak var blueRobotLogo: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +25,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func hideBlue(sender: UIButton) {
+        blueRobotLogo.hidden = true
+        redRobotLogo.hidden = false
+    }
+    @IBAction func hideRed(sender: UIButton) {
+        redRobotLogo.hidden = true
+        blueRobotLogo.hidden = false
+    }
 
 }
 
